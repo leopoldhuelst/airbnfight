@@ -1,20 +1,25 @@
 class ArenasController < ApplicationController
+  before_action :set_arena, only: [:show, :edit, :update, :destroy]
+
   def index
-    @arenas = Arena.all
+    @arenas = policy_scope(Arena)
   end
 
   def show
-    id = params[:id]
-    @arena = Arena.find(id)
+    # id = params[:id]
+    # @arena = Arena.find(id)
   end
 
   def new
-    @arena = current_user.restaurants.new
+    @arena = Arena.new
+    authorize @arena
+
   end
 
   def create
+    @arena = Arena.new(strong_params)
+    @arena.fighter = current_user
     authorize @arena
-    @arena = @arena.new(strong_params)
     @arena.save
 
     redirect_to arena_path(@arena)
@@ -29,20 +34,25 @@ class ArenasController < ApplicationController
   end
 
   def edit
-    id = params[:id]
-    @arena = Arena.find(id)
+    # id = params[:id]
+    # @arena = Arena.find(id)
   end
 
   def update
-    id = params[:id]
-    arena = Arena.find(id)
-    arena.update(strong_params)
-    arena.save
+    # id = params[:id]
+    # arena = Arena.find(id)
+    @arena.update(strong_params)
+    # arena.save
 
-    redirect_to arena_path(arena.id)
+    redirect_to arena_path(@arena.id)
   end
 
   private
+
+  def set_arena
+    @arena = Arena.find(params[:id])
+    authorize @arena
+  end
 
   def strong_params
     params.require(:arena).permit(:address, :description, :capacity)
