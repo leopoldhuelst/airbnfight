@@ -1,5 +1,5 @@
 class Arena < ApplicationRecord
-  belongs_to :fighter, dependent: :destroy
+  belongs_to :fighter
 
   validates :address, presence: true
   validates :description, length: { minimum: 15 }

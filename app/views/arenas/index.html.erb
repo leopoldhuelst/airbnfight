@@ -1,0 +1,7 @@
+<h1>All arenas</h1>
+<% @arenas.each do |arena| %>
+<%= link_to "#{arena.address}", arena_path(arena.id) %>
+<%= arena.capacity %>
+<%= arena.description %>
+<br>
+<% end %>
