@@ -9,9 +9,15 @@ class ArenasController < ApplicationController
   end
 
   def new
+    @arena = current_user.restaurants.new
   end
 
   def create
+    authorize @arena
+    @arena = @arena.new(strong_params)
+    @arena.save
+
+    redirect_to arena_path(@arena)
   end
 
   def destroy
