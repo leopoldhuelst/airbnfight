@@ -1,0 +1,12 @@
+<h1>Edit your arena</h1>
+<%= form_for(@arena) do |f| %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :capacity %>
+  <%= f.number_field :capacity %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back to Arena", arena_path(@arena.id) %>
