@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   devise_for :fighters
   root to: 'pages#home'
 
-  get '/arenas', to: 'arenas#index'
   get '/dashboard', to: 'dashboards#index'
+  get '/arenas', to: 'arenas#index'
   get '/arenas/:id/edit', to: 'arenas#edit', as: 'arena_edit'
   patch '/arenas/:id', to: 'arenas#update'
   get 'arenas/new', to: 'arenas#new'

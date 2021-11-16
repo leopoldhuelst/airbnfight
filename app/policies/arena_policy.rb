@@ -5,10 +5,6 @@ class ArenaPolicy < ApplicationPolicy
     end
   end
 
-  # def index
-  #   @arenas = policy_scope(Restaurant).order(created_at: :desc)
-  # end
-
   def edit?
     true
   end
