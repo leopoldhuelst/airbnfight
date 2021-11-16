@@ -1,0 +1,18 @@
+#parralax {
+  height: 200px;
+  // border: 3px solid white;
+  color: white;
+  position: relative;
+}
+#parralax img {
+  height: 820px;
+  width: cover;
+}
+
+#description {
+  border: 3px dotted white;
+  width: 40%;
+  position: absolute;
+  top: 148px;
+  left: 127;
+}

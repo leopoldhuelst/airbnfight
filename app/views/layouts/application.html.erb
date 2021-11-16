@@ -12,9 +12,9 @@
   </head>
 
   <body>
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <a class="navbar-brand" href="#">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="z-index: 1">
+      <a class="navbar-brand" href="#" >
+        <img src="https://user-images.githubusercontent.com/17777237/54872929-c67d0b80-4dd4-11e9-83ed-9b6e88fe065a.jpg" class="rounded-circle"/>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,11 @@
         <ul class="navbar-nav mr-auto">
 
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a id="home" class="nav-link" href="#">HOME</a>
+          </li>
+
+          <li class="nav-item active">
+            <a id="dashboard" class="nav-link" href="#">DASHBOARD</a>
           </li>
 
           <%# link avatar to dashboard %>
@@ -42,5 +46,6 @@
     </div>
 
     <%= yield %>
+    <div id="footer"></div>
   </body>
 </html>
