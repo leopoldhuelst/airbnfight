@@ -7,6 +7,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
@@ -22,14 +25,18 @@
 
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul id="navbar" class="navbar-nav mr-auto">
 
           <li class="nav-item active">
-            <a id="home" class="nav-link" href="#">HOME</a>
+            <a class="nav-link" href="#">HOME</a>
           </li>
 
           <li class="nav-item active">
-            <a id="dashboard" class="nav-link" href="#">DASHBOARD</a>
+            <a class="nav-link" href="#">DASHBOARD</a>
+          </li>
+
+          <li class="nav-item active">
+            <a id="sign-up" class="nav-link" href="#">SIGN UP</a>
           </li>
 
           <%# link avatar to dashboard %>
@@ -46,6 +53,17 @@
     </div>
 
     <%= yield %>
-    <div id="footer"></div>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="footer-copyright">
+        This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+      </div>
+    </div>
   </body>
 </html>

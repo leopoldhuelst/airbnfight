@@ -52,9 +52,9 @@ $col) {
   border: 1.5px solid #E5E5E5;
   width: 101%;
   height: 100%;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  font-size: 18px;
+  font-family: 'Alfa Slab One', cursive;
+  font-weight: 200;
+  font-size: 25px;
   letter-spacing: 1px;
   font-weight: bold;
 
@@ -64,7 +64,7 @@ $col) {
   2300%,
   100%,
   none,
-  #fff);
+  white);
   cursor: pointer;
   -webkit-animation: ani2 0.7s steps(22) forwards;
   animation: ani2 0.7s steps(22) forwards;
@@ -122,15 +122,15 @@ $col) {
     color: white;
     text-align: center;
     width: 101%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Alfa Slab One', cursive;
     font-weight: 300;
     position: absolute;
-    font-size: 17px;
+    font-size: 25px;
     font-weight: 600;
     margin-top: 17px;
     overflow: hidden;
     font-weight: bold;
-    top: 7px;
+    top: 2px;
 
 }
 
