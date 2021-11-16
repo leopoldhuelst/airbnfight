@@ -1,0 +1,7 @@
+<h1><%= @arena.address %></h1>
+<%= @arena.description %>
+<%= @arena.capacity %>
+<%= link_to "Delete Arena", arenas_delete_path(@arena.id), method: :delete, data: { confirm: "Are you sure?" } %>
+
+<%= link_to 'Edit Arena', arena_edit_path(@arena.id) %>
+<%= link_to 'Back to Arenas', arenas_path %>
