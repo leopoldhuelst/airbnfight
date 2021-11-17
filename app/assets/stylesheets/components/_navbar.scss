@@ -1,6 +1,21 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  position: fixed;
+  overflow: visible;
+  width: 100%;
+}
+
+
+#sign-up {
+  margin-right: 20px;
+}
+
+#navbar a {
+  color: white;
+  text-shadow: 2px 2px 0px #FE4E02 ;
+  // font-family: 'Alfa Slab One', cursive;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +24,8 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+#navbarDropdown {
+  border:  3px solid #FE4E02;
 }
