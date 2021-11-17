@@ -16,4 +16,8 @@ class FightPolicy < ApplicationPolicy
   def update?
     record.fighter == user
   end
+
+  def destroy?
+    record.fighter == user || record.arena.fighter == user
+  end
 end

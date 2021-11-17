@@ -23,8 +23,6 @@ class FightsController < ApplicationController
     end
   end
 
-  def destroy
-  end
 
   def edit
   end
@@ -35,6 +33,14 @@ class FightsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    id = params[:id]
+    fight = Fight.find(id)
+    fight.destroy
+
+    redirect_to dashboard_path
   end
 
   def approve

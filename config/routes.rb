@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   get '/fights/:id', to: 'fights#show', as: 'fight'
   get '/fights/:id/edit', to: 'fights#edit', as: 'fight_edit'
   patch '/fights/:id', to: 'fights#update', as: 'arena_fight'
+  delete '/fights/:id', to: 'fights#destroy', as: 'fights_delete'
 end
