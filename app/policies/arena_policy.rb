@@ -25,4 +25,8 @@ class ArenaPolicy < ApplicationPolicy
     record.fighter == user
   end
 
+  # def fights?
+  #   record.fighter == user
+  # end
+
 end
