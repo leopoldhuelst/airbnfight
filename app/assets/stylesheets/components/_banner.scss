@@ -1,0 +1,66 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  background-image: url(https://img.wallpaper.sc/android/images/1440x1280/android-1440x1280-wallpaper_02145.jpg);
+  height: 675px;
+  position: relative;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: 0px;
+  top: 496px;
+  // border: 2px dotted white;
+  width: 100%;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+
+#fight-button {
+  border-radius: 15px;
+  position: absolute;
+  left: 667px;
+  top: 596px;
+  color: white;
+  // border: 2px dotted white;
+}
+
+#fight-button:hover {
+  box-shadow: inset 2px 2px 1px black;
+  padding: 20px;
+}
+
+// #fight-button {
+//   // border-radius: 15px;
+//   position: absolute;
+//   left: 667px;
+//   top: 596px;
+//   // box-shadow: 3px 3px 2px #23BBED;
+//   color: white;
+//   border: 3px solid grey;
+//   // border: 2px dotted white;
+// }
+
+#banner-expansion {
+  height: 150px;
+  width: cover;
+  color: black;
+  background-color: black;
+}
+
+
+
+// .banner p {
+//   font-size: 20px;
+//   color: white;
+//   opacity: .7;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   text-align: center;
+// }

@@ -1,0 +1,32 @@
+#parralax {
+  height: 1100px;
+  // border: 3px solid white;
+  color: white;
+  position: relative;
+  background-image:
+    linear-gradient(to bottom, rgba(247, 248, 250, 0), rgba(0, 0, 0, 1)),
+    url(https://cdna.artstation.com/p/assets/images/images/019/567/250/large/mohammx-eideh-neon-alley-bw.jpg?1564061270);
+}
+
+#parralax img {
+  height: 820px;
+  width: cover;
+}
+
+#description {
+  width: 40%;
+  position: absolute;
+  top: 148px;
+  left: 127px;
+}
+
+#description h2 {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 40px;
+}
+
+#description h3 {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 23px;
+
+}
