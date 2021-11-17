@@ -7,8 +7,12 @@
         <p>Capacity: <%= @arena.capacity %></p>
       </div>
       <div class="buttons">
-        <p class="button-delete"><%= link_to "DELETE ARENA", arenas_delete_path(@arena.id), method: :delete, data: { confirm: "Are you sure?" } %></p>
-        <p class="button-edit"><%= link_to 'EDIT ARENA', arena_edit_path(@arena.id) %></p>
+        <p class="button-delete"><% if policy(@arena).destroy? %>
+          <%= link_to "DELETE", arenas_delete_path(@arena.id), method: :delete, data: { confirm: "Are you sure?" } %>
+          <% end %></p>
+        <p class="button-edit"><% if policy(@arena).update? %>
+          <%= link_to 'EDIT', arena_edit_path(@arena.id) %>
+          <% end %></p>
         <p class="button-back"><%= link_to 'BACK', arenas_path %></p>
       </div>
     </div>
