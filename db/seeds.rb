@@ -26,6 +26,7 @@ character_names.each do |character_name|
   )
 
   Fight.create!(
+    title: Faker::Restaurant.name,
     duration: rand(5..60),
     date: Faker::Date.between(from: '2012-09-23', to: '2014-09-25'),
     number_of_fighters: rand(5..9),
