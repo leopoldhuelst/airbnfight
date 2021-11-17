@@ -1,7 +1,18 @@
-<h1><%= @arena.address %></h1>
-<%= @arena.description %>
-<%= @arena.capacity %>
-<%= link_to "Delete Arena", arenas_delete_path(@arena.id), method: :delete, data: { confirm: "Are you sure?" } %>
-
-<%= link_to 'Edit Arena', arena_edit_path(@arena.id) %>
-<%= link_to 'Back to Arenas', arenas_path %>
+<div id="show-background">
+  <div class="arena-card">
+    <div id="card-content">
+      <div id="card-info">
+        <h1><%= @arena.address %></h1>
+        <p>Description: <%= @arena.description %></p>
+        <p>Capacity: <%= @arena.capacity %></p>
+      </div>
+      <div class="buttons">
+        <p class="button-delete"><%= link_to "DELETE ARENA", arenas_delete_path(@arena.id), method: :delete, data: { confirm: "Are you sure?" } %></p>
+        <p class="button-edit"><%= link_to 'EDIT ARENA', arena_edit_path(@arena.id) %></p>
+        <p class="button-back"><%= link_to 'BACK', arenas_path %></p>
+      </div>
+    </div>
+    <div id="card-image">
+    </div>
+  </div>
+</div>
