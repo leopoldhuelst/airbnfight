@@ -1,9 +1,11 @@
-<h1>Create a new Fight</h1>
-<%= simple_form_for [ @arena, @fight ] do |f| %>
-    <%= f.input :title %>
-    <%= f.input :date %>
-    <%= f.input :duration %>
-    <%= f.input :number_of_fighters %>
-    <%= f.input :weapons_allowed %>
-    <%= f.submit "Create a fight" %>
-<% end %>
+<div class="form">
+  <h1>Create a new Fight</h1>
+  <%= simple_form_for [ @arena, @fight ] do |f| %>
+      <%= f.input :title %>
+      <%= f.input :date %>
+      <%= f.input :duration %>
+      <%= f.input :number_of_fighters %>
+      <%= f.input :weapons_allowed %>
+      <%= f.submit "Create a fight" %>
+  <% end %>
+</div>
