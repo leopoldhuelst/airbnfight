@@ -1,14 +1,31 @@
-<div id="new-arena">
-<h1>Create a new Arena</h1>
-<%= form_for(@arena) do |f| %>
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.label :capacity %>
-  <%= f.number_field :capacity %>
-  <%= f.submit %>
-<% end %>
+<div class="bg-image"
+     style="background-image: url('https://cdn.pixabay.com/photo/2016/07/28/19/38/lost-places-1549096_1280.jpg');
+            background-size: cover">
+  <div class="form">
+    <div id="new-arena">
+    <h1>Create a new Arena</h1>
+    <%= form_for(@arena) do |f| %>
+      <%= f.label :address %>
+      <br>
+      <%= f.text_field :address %>
+      <br>
+      <br>
+      <%= f.label :description %>
+      <br>
+      <%= f.text_field :description %>
+      <br>
+      <br>
+      <%= f.label :capacity %>
+      <br>
+      <%= f.number_field :capacity %>
+      <br>
+      <br>
+      <%= f.submit %>
+      <br>
+      <br>
+    <% end %>
 
-<%= link_to 'Back to Arenas', arenas_path %>
+    <%= link_to 'Back to Arenas', arenas_path %>
+    </div>
+  </div>
 </div>

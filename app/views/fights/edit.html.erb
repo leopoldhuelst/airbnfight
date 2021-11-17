@@ -1,9 +1,11 @@
-<h1>Edit <%= @fight.title %></h1>
-<%= simple_form_for @fight do |f| %>
-    <%= f.input :title %>
-    <%= f.input :date %>
-    <%= f.input :duration %>
-    <%= f.input :number_of_fighters %>
-    <%= f.input :weapons_allowed %>
-    <%= f.submit "Update your fight" %>
-<% end %>
+<div class="form">
+  <h1>Edit <%= @fight.title %></h1>
+  <%= simple_form_for @fight do |f| %>
+      <%= f.input :title %>
+      <%= f.input :date %>
+      <%= f.input :duration %>
+      <%= f.input :number_of_fighters %>
+      <%= f.input :weapons_allowed %>
+      <%= f.submit "Update your fight" %>
+  <% end %>
+</div>
