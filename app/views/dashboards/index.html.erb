@@ -10,11 +10,7 @@
 
 <h2>My Fights</h2>
 <% @fights.each do |fight|%>
-<%= fight.duration%>
-<%= fight.date%>
-<%= fight.weapons_allowed%>
-<%= fight.approved_at%>
-<%= fight.number_of_fighters%>
+<%= link_to "#{fight.title}", fight_path(fight) %>
 <% end %>
 <br>
 <%= link_to 'Back to Arenas', arenas_path %>

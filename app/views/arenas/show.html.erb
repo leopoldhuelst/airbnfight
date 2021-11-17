@@ -8,3 +8,5 @@
 <%= link_to 'Edit Arena', arena_edit_path(@arena.id) %>
 <% end %>
 <%= link_to 'Back to Arenas', arenas_path %>
+<br>
+<%= link_to "Create a fight", fights_new_path(@arena.id) %>
