@@ -1,16 +1,12 @@
-class ArenaPolicy < ApplicationPolicy
+class FightPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
 
-  def edit?
-    true
-  end
-
   def show?
-    true
+    record.fighter == user || record.arena.fighter == user
   end
 
   def create?
@@ -22,11 +18,6 @@ class ArenaPolicy < ApplicationPolicy
   end
 
   def destroy?
-    record.fighter == user
+    record.fighter == user || record.arena.fighter == user
   end
-
-  # def fights?
-  #   record.fighter == user
-  # end
-
 end

@@ -1,0 +1,18 @@
+<h1>My Dashboard</h1>
+<br>
+<h2>My Arenas</h2>
+<% @arenas.each do |arena|%>
+<%= link_to "#{arena.address}", arena_path(arena.id)%>
+<% end %>
+<br>
+
+<h2>My Fights</h2>
+<% @fights.each do |fight|%>
+<%= link_to "#{fight.title}", fight_path(fight) %>
+<% end %>
+<br>
+<%= link_to 'Back to Arenas', arenas_path %>
+<br>
+<%= link_to 'Edit your Profile', edit_fighter_registration_path %>
+<br>
+<%= link_to 'Sign out', destroy_fighter_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
