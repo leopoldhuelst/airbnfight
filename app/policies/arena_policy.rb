@@ -24,9 +24,4 @@ class ArenaPolicy < ApplicationPolicy
   def destroy?
     record.fighter == user
   end
-
-  # def fights?
-  #   record.fighter == user
-  # end
-
 end
