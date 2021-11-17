@@ -45,7 +45,7 @@ $col) {
  transition: 0.5s;
  letter-spacing: 1px;
  border-radius: 8px;
- top: 400px;
+ top: 430px;
 
 
  button {
@@ -66,12 +66,12 @@ $col) {
   none,
   white);
   cursor: pointer;
-  -webkit-animation: ani2 0.7s steps(22) forwards;
-  animation: ani2 0.7s steps(22) forwards;
+  -webkit-animation: ani2 0.5s steps(22) forwards;
+  animation: ani2 0.5s steps(22) forwards;
 
   &:hover {
-   -webkit-animation: ani 0.7s steps(22) forwards;
-   animation: ani 0.7s steps(22) forwards;
+   -webkit-animation: ani 0.5s steps(22) forwards;
+   animation: ani 0.5s steps(22) forwards;
   }
  }
 }
