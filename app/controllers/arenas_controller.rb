@@ -6,8 +6,6 @@ class ArenasController < ApplicationController
   end
 
   def show
-    # id = params[:id]
-    # @arena = Arena.find(id)
   end
 
   def new
@@ -34,15 +32,10 @@ class ArenasController < ApplicationController
   end
 
   def edit
-    # id = params[:id]
-    # @arena = Arena.find(id)
   end
 
   def update
-    # id = params[:id]
-    # arena = Arena.find(id)
     @arena.update(strong_params)
-    # arena.save
 
     redirect_to arena_path(@arena.id)
   end
