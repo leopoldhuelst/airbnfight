@@ -1,22 +1,23 @@
-<h1><%= @arena.address %></h1>
-<%= @arena.description %>
-<%= @arena.capacity %>
-<% if policy(@arena).destroy? %>
-<%= link_to "Delete Arena", arenas_delete_path(@arena.id), method: :delete, data: { confirm: "Are you sure?" } %>
-<% end %>
-<% if policy(@arena).update? %>
-<%= link_to 'Edit Arena', arena_edit_path(@arena.id) %>
-<% end %>
-<%= link_to 'Back to Arenas', arenas_path %>
-<br>
-<%= link_to "Create a fight", fights_new_path(@arena.id) %>
-
-<%# <% if @arena.fighter == current_fighter %> %>
- <%# <% Fight.where(@arena.id = arena_id).each do |fight| %> %>
-    <%# <%= fight.title %> %>
-    <%# <%= fight.date %> %>
-    <%# <%= fight.duration %> %>
-    <%# <%= fight.number_of_fighters %> %>
-    <%# <%= fight.weapons_allowed %> %>
-  <%# <% end %> %>
-<%# <% end %> %>
+<div id="show-background">
+  <div class="arena-card">
+    <div id="card-content">
+        <div id="card-info">
+          <h1><%= @arena.address %></h1>
+          <p>Description: <%= @arena.description %></p>
+          <p>Capacity: <%= @arena.capacity %></p>
+          <%= link_to "Create a fight", fights_new_path(@arena.id) %>
+        </div>
+        <div class="buttons">
+          <p class="button-delete"><% if policy(@arena).destroy? %>
+            <%= link_to "DELETE", arenas_delete_path(@arena.id), method: :delete, data: { confirm: "Are you sure?" } %>
+            <% end %></p>
+          <p class="button-edit"><% if policy(@arena).update? %>
+            <%= link_to 'EDIT', arena_edit_path(@arena.id) %>
+            <% end %></p>
+          <p class="button-back"><%= link_to 'BACK', arenas_path %></p>
+        </div>
+      </div>
+      <div id="card-image">
+    </div>
+  </div>
+</div>
