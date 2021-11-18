@@ -16,9 +16,11 @@
 
   <body>
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="z-index: 1">
-      <a class="navbar-brand" href="#" >
-        <img src="https://user-images.githubusercontent.com/17777237/54872929-c67d0b80-4dd4-11e9-83ed-9b6e88fe065a.jpg" class="rounded-circle"/>
-      </a>
+      <div class="navbar-brand">
+        <%= link_to root_path do %>
+          <img src="https://user-images.githubusercontent.com/17777237/54872929-c67d0b80-4dd4-11e9-83ed-9b6e88fe065a.jpg" class="rounded-circle"/>
+        <% end %>
+      </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,10 +35,6 @@
 
           <li class="nav-item active">
             <%= link_to 'DASHBOARD', dashboard_path, class: "nav-link"%>
-          </li>
-
-          <li class="nav-item active">
-            <a id="sign-up" class="nav-link" href="#">SIGN UP</a>
           </li>
 
           <%# link avatar to dashboard %>

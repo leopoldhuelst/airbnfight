@@ -18,9 +18,11 @@ class ArenasController < ApplicationController
     @arena = Arena.new(strong_params)
     @arena.fighter = current_user
     authorize @arena
-    @arena.save
-
-    redirect_to arena_path(@arena)
+    if @arena.save
+      redirect_to arena_path(@arena)
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -35,9 +37,11 @@ class ArenasController < ApplicationController
   end
 
   def update
-    @arena.update(strong_params)
-
-    redirect_to arena_path(@arena.id)
+    if @arena.update(strong_params)
+      redirect_to arena_path(@arena.id)
+    else
+      render :edit
+    end
   end
 
   private
