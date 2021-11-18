@@ -3,6 +3,12 @@ class ArenasController < ApplicationController
 
   def index 
     @arenas = policy_scope(Arena)
+    @markers = @arenas.geocoded.map do |arena|
+      {
+        lat: arena.latitude,
+        lng: arena.longitude
+      }
+    end
   end
 
   def show
