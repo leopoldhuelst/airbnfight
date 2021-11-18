@@ -24,9 +24,12 @@
 #index-header {
   display: flex;
   justify-content: space-between;
-  width: 55%;
+  width: 80px;
   align-items: flex-end;
+  margin-right: 0 auto;
 }
+
+
 
 
 .card-product {
@@ -40,7 +43,6 @@
   border: 2px solid black;
   min-width: 270px;
   max-width: 280px;
-  // width: 260px;
 }
 
 .card-product:hover {
@@ -81,7 +83,12 @@
 
 
 #all-arenas {
-  width: 60%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.index-page {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
 }
