@@ -1,7 +1,11 @@
-#show-background-arena {
+#show-background-hospital {
   background-image:
     linear-gradient(to bottom, rgba(247, 248, 250, 0), rgba(0, 0, 0, 1)),
-    url(https://cdna.artstation.com/p/assets/images/images/019/567/250/large/mohammx-eideh-neon-alley-bw.jpg?1564061270);
+    url(https://images.unsplash.com/photo-1512678080530-7760d81faba6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80);
+    background-size: cover;
+    filter: grayscale(100%);
+    // background-position-y: -600px;
+    // background-position: ;
   padding: 170px 0 230px 0;
 }
 
@@ -67,7 +71,7 @@
   justify-content: flex-start;
 }
 
-#card-image-arena {
+#card-image-hospital {
   width: 50%;
   height: 100%;
   // border: 3px solid white;
@@ -78,7 +82,7 @@
   filter: grayscale(100%);
 }
 
-#card-content-arena {
+#card-content-hospital {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

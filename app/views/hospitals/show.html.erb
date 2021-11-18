@@ -1,11 +1,10 @@
-<div id="show-background-arena">
+<div id="show-background-hospital">
   <div class="arena-card">
-    <div id="card-content-arena">
+    <div id="card-content-hospital">
         <div id="card-info">
-          <h1><%= @arena.address %></h1>
-          <p>Description: <%= @arena.description %></p>
-          <p>Capacity: <%= @arena.capacity %></p>
-          <%= link_to "Create a fight", fights_new_path(@arena.id) %>
+          <h1><%= @hospital.name %></h1>
+          <p>Address: <%= @hospital.address %></p>
+          <p>Rating: <%= @hospital.rating %>/5</p>
         </div>
         <div class="buttons">
           <p class="button-delete"><% if policy(@arena).destroy? %>
@@ -14,10 +13,10 @@
           <p class="button-edit"><% if policy(@arena).update? %>
             <%= link_to 'EDIT', arena_edit_path(@arena.id) %>
             <% end %></p>
-          <p class="button-back"><%= link_to 'BACK', arenas_path %></p>
+          <p class="button-back"><%= link_to 'BACK', hospitals_path %></p>
         </div>
       </div>
-      <div id="card-image-arena">
+      <div id="card-image-hospital">
     </div>
   </div>
 </div>
