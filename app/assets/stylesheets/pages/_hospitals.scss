@@ -1,0 +1,86 @@
+#hospitals {
+  color: white;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+// Import page-specific CSS files here.
+@import "home";
+@import "new_arena";
+
+#hospital-page {
+  padding-top: 120px;
+  margin-bottom: 130px;
+  // margin: auto;
+  margin-left: 40px;
+}
+
+#hospital-page h1 {
+  color: white;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+#new-hospital-button a {
+  text-decoration: none;
+  color: white;
+  // text-shadow: 2px 2px 0px #FE4E02;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 20px;
+}
+
+#index-header {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  align-items: flex-end;
+}
+
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: rgb(39, 39, 39);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  width: 30%;
+  margin: 4px;
+}
+
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.card-product a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px 0px #FE4E02 ;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: white;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+
+#all-hospitals {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+}
