@@ -1,18 +1,32 @@
-<h1>My Dashboard</h1>
-<br>
-<h2>My Arenas</h2>
-<% @arenas.each do |arena|%>
-<%= link_to "#{arena.address}", arena_path(arena.id)%>
-<% end %>
-<br>
+<div class="bg-image"
+     style="background-image: url('https://p4.wallpaperbetter.com/wallpaper/509/26/507/blow-fighter-fist-wallpaper-preview.jpg');
+            background-size: cover">
+  <div class="form">
+    <h1>My Dashboard</h1>
+    <br>
+    <h2>My Arenas</h2>
+    <% if @arenas.empty? %>
+      <p>You have no arenas!</p>
+    <% else %>
+      <% @arenas.each do |arena|%>
+      <%= link_to "#{arena.address}", arena_path(arena.id)%>
+      <% end %>
+      <br>
+    <% end %>
 
-<h2>My Fights</h2>
-<% @fights.each do |fight|%>
-<%= link_to "#{fight.title}", fight_path(fight) %>
-<% end %>
-<br>
-<%= link_to 'Back to Arenas', arenas_path %>
-<br>
-<%= link_to 'Edit your Profile', edit_fighter_registration_path %>
-<br>
-<%= link_to 'Sign out', destroy_fighter_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
+    <h2>My Fights</h2>
+    <div class="mb-0.5">
+    <% @fights.each do |fight|%>
+    <%= link_to "#{fight.title}", fight_path(fight) %>
+    <% end %>
+    </div>
+    <br>
+    <div class="buttons">
+      <%= link_to 'Back to Arenas', arenas_path, class: "submit-button" %>
+      <br>
+      <%= link_to 'Edit your Profile', edit_fighter_registration_path, class: "submit-button" %>
+      <br>
+      <%= link_to 'Sign out', destroy_fighter_session_path, method: :delete, data: { confirm: "Are you sure?" }, class: "submit-button" %>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,18 @@
-<h1>Your Fight</h1>
-<%= "Date: #{@fight.date}" %>
-<br>
-<%= "Duration: #{@fight.duration}" %>
-<br>
-<%= "Number of Fighters: #{@fight.number_of_fighters}" %>
-<br>
-<%= "Weapons allowed? #{@fight.weapons_allowed}" %>
-<br>
-<%= link_to "Edit your fight", fight_edit_path(@fight.id) %>
-<%= link_to "Back to Dashboard", dashboard_path %>
-<%= link_to "Delete Fight", fights_delete_path(@fight.id), method: :delete, data: { confirm: "Are you sure?" } %>
+<div class="form">
+  <div class="mb-4">
+    <h1>Your Fight</h1>
+    <%= "Date: #{@fight.date}" %>
+    <br>
+    <%= "Duration: #{@fight.duration} minutes" %>
+    <br>
+    <%= "Number of Fighters: #{@fight.number_of_fighters}" %>
+    <br>
+    <%= "Weapons allowed? #{@fight.weapons_allowed}" %>
+    <br>
+  </div>
+  <div class="buttons">
+    <%= link_to "Edit your fight", fight_edit_path(@fight.id), class: "submit-button" %>
+    <%= link_to "Back to Dashboard", dashboard_path, class: "submit-button" %>
+    <%= link_to "Delete Fight", fights_delete_path(@fight.id), method: :delete, data: { confirm: "Are you sure?" }, class: "submit-button" %>
+  </div>
+</div>

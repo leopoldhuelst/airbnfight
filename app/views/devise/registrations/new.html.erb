@@ -1,42 +1,44 @@
-<h2>Sign up</h2>
+<div class="form">
+  <h2>Sign up</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :nickname,
-                required: true,
-                input_html: { autocomplete: "nickname" } %>
-    <%= f.input :age,
-                required: true,
-                input_html: { autocomplete: "age" } %>
-    <%= f.input :height,
-                required: true,
-                input_html: { autocomplete: "height" } %>
-    <%= f.input :weight,
-                required: true,
-                input_html: { autocomplete: "weight" } %>
-    <%= f.input :arm_range,
-                required: false,
-                input_html: { autocomplete: "arm_range" } %>
-  </div>
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }%>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :nickname,
+                  required: true,
+                  input_html: { autocomplete: "nickname" } %>
+      <%= f.input :age,
+                  required: true,
+                  input_html: { autocomplete: "age" } %>
+      <%= f.input :height,
+                  required: true,
+                  input_html: { autocomplete: "height" } %>
+      <%= f.input :weight,
+                  required: true,
+                  input_html: { autocomplete: "weight" } %>
+      <%= f.input :arm_range,
+                  required: false,
+                  input_html: { autocomplete: "arm_range" } %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+    <div>
+      <%= f.button :submit, "Sign up", class: "submit-button" %>
+    </div>
+  <% end %>
 
+<<<<<<< HEAD
 <%= render "devise/shared/links" %>
 <br>
 <br>
@@ -46,3 +48,7 @@
 <br>
 <br>
 <br>
+=======
+  <%= render "devise/shared/links" %>
+</div>
+>>>>>>> e47ec5e3382306cd0773626ca752474e6f2085d4
