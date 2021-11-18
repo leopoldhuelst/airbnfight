@@ -1,8 +1,14 @@
 class ArenasController < ApplicationController
   before_action :set_arena, only: [:show, :edit, :update, :destroy]
 
-  def index
+  def index 
     @arenas = policy_scope(Arena)
+    @markers = @arenas.geocoded.map do |arena|
+      {
+        lat: arena.latitude,
+        lng: arena.longitude
+      }
+    end
   end
 
   def show

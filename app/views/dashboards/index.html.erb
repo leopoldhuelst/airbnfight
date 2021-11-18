@@ -2,7 +2,7 @@
      style="background-image: url('https://p4.wallpaperbetter.com/wallpaper/509/26/507/blow-fighter-fist-wallpaper-preview.jpg');
             background-size: cover">
   <div class="form">
-    <h1>My Dashboard</h1>
+    <h1>My Dashboard </h1>
     <br>
     <div class="form-info">
       <h2>My Arenas</h2>
@@ -16,10 +16,14 @@
       <% end %>
       <div class="mt-5">
       <h2>My Fights</h2>
+      <% if @fights.empty? %>
+        <p>You have no fights!</p>
+      <% else %>
           <% @fights.each do |fight|%>
               <%= link_to "#{fight.title}", fight_path(fight), class:"form-list-element" %>
               <br>
           <% end %>
+      <% end %>
       </div>
     </div>
     <br>

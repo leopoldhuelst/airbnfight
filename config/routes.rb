@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/hospitals', to: 'hospitals#index'
+  get '/hospitals/:id', to: 'hospitals#show', as: 'hospital'
   devise_for :fighters
   root to: 'pages#home'
 
