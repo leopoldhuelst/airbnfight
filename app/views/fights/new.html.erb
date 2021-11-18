@@ -1,11 +1,19 @@
-<div class="form">
-  <h1>Create a new Fight</h1>
-  <%= simple_form_for [ @arena, @fight ] do |f| %>
-      <%= f.input :title %>
-      <%= f.input :date %>
-      <%= f.input :duration %>
-      <%= f.input :number_of_fighters %>
-      <%= f.input :weapons_allowed %>
-      <%= f.submit "Create a fight" %>
-  <% end %>
+<div class="bg-image"
+     style="background-image: url('https://c.pxhere.com/photos/9a/8b/lost_places_old_decay_ruin_railway_depot_train_train_hall_goods_station-1203061.jpg!d');
+            background-size: cover">
+  <div class="form">
+    <h1>Create a new Fight</h1>
+    <div class="form-info">
+      <%= simple_form_for [ @arena, @fight ] do |f| %>
+          <%= f.input :title %>
+          <%= f.input :date %>
+          <%= f.input :duration %>
+          <%= f.input :number_of_fighters %>
+          <%= f.input :weapons_allowed %>
+          <%= f.submit "Create a fight" %>
+      <% end %>
+    </div>
+
+    <p class="button-back"><%= link_to "←Back", arena_path(@arena)%></p>
+  </div>
 </div>

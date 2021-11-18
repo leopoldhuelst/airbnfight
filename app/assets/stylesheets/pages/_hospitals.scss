@@ -1,0 +1,47 @@
+#hospitals {
+  color: white;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+// Import page-specific CSS files here.
+@import "home";
+@import "new_arena";
+
+#hospital-page {
+  padding: 120px;
+  // margin: 0 auto;
+  // margin-bottom: 130px;
+  // margin-left: 380px;
+}
+
+#hospital-page h1 {
+  color: white;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+#all-hospitals-header {
+  margin: 15px 100px;
+}
+
+#all-hospitals {
+  width: 100%;
+  // border: 3px solid red;
+}
+
+.hospital-index-card {
+  color: white;
+  // border: 3px dotted grey;
+  margin: 10px 100px;
+  font-family: 'Alfa Slab One', cursive;
+  height: 200px;
+  background-color: #272727;
+  padding: 40px;
+}
+
+.hospital-index-card:hover {
+  background-color: #1f1f1f;
+}
+
+.hospital-index-card h2 {
+  font-family: 'Alfa Slab One', cursive;
+}

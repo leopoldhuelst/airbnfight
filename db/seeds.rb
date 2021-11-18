@@ -38,4 +38,14 @@ character_names.each do |character_name|
   )
 end
 
+5.times do
+  Hospital.create!(
+    name: "#{Faker::Name.male_first_name} #{Faker::Name.last_name} Hospital",
+    rating: [5, 5, 5, 4, 4, 4, 4, 4, 3, 3, 3, 2, 2, 1].sample ,
+    address: "#{Faker::Address.street_name} #{Faker::Address.building_number} #{Faker::JapaneseMedia::OnePiece.location}",
+    latitude: Faker::Address.latitude,
+    longitude: Faker::Address.longitude
+  )
+end
+
 puts "Data generated"

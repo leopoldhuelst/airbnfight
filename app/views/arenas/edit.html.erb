@@ -1,14 +1,16 @@
-<div class="form">
-<h1>Edit your arena</h1>
-<%= form_for(@arena) do |f| %>
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.label :capacity %>
-  <%= f.number_field :capacity %>
-  <%= f.submit %>
-<% end %>
+<div class="bg-image"
+     style="background-image: url('https://cdn.pixabay.com/photo/2017/09/13/14/00/lost-places-2745596_960_720.jpg');
+            background-size: cover">
+  <div class="form">
+    <h1>Edit your arena</h1>
+    <div class="form-info">
+      <%= simple_form_for @arena do |f| %>
+        <%= f.input :address %>
+        <%= f.input :description %>
+        <%= f.input :capacity %>
+        <%= f.submit %>
+      <% end %>
+    </div>
 
-<%= link_to "Back to Arena", arena_path(@arena.id) %>
-</div>
+    <p class="button-back"><%= link_to "←Back", arena_path(@arena.id) %></p>
+  </div>
