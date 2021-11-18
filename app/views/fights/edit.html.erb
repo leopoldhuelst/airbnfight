@@ -1,0 +1,18 @@
+<div class="bg-image"
+     style="background-image: url('https://c.pxhere.com/photos/be/de/lost_places_old_decay_ruin_railway_depot_train_train_hall_goods_station-1203230.jpg!d');
+            background-size: cover">
+  <div class="form">
+    <h1>Edit <%= @fight.title %></h1>
+    <div class="form-info">
+      <%= simple_form_for @fight do |f| %>
+          <%= f.input :title %>
+          <%= f.input :date %>
+          <%= f.input :duration %>
+          <%= f.input :number_of_fighters %>
+          <%= f.input :weapons_allowed %>
+          <%= f.submit "Update your fight" %>
+      <% end %>
+    </div>
+
+    <p class="button-back"><%= link_to "←Back", dashboard_path %></p>
+  </div>

@@ -1,0 +1,27 @@
+<div id="show-background-arena">
+  <div class="arena-card">
+    <div id="card-content-arena">
+      <div id="card-info">
+        <h1>Your Fight</h1>
+          <p>
+            <%= "Date: #{@fight.date}" %>
+          </p>
+          <p>
+            <%= "Duration: #{@fight.duration} minutes" %>
+          </p>
+          <p>
+            <%= "Number of Fighters: #{@fight.number_of_fighters}" %>
+          </p>
+          <p>
+            <%= "Weapons allowed? #{@fight.weapons_allowed}" %>
+          </p>
+      </div>
+      <div class="buttons">
+        <p class="button-back"><%= link_to "←Back", dashboard_path %></p>
+        <p class="button-edit"><%= link_to "Edit", fight_edit_path(@fight.id) %></p>
+        <p class="button-delete" ><%= link_to "Delete", fights_delete_path(@fight.id), method: :delete, data: { confirm: "Are you sure?" }%></p>
+      </div>
+    </div>
+    <div id="card-image-arena"></div>
+  </div>
+</div>

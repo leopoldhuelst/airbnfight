@@ -1,23 +1,34 @@
 class ArenasController < ApplicationController
-  def index
-    @arenas = Arena.all
+  before_action :set_arena, only: [:show, :edit, :update, :destroy]
+
+  def index 
+    @arenas = policy_scope(Arena)
+    @markers = @arenas.geocoded.map do |arena|
+      {
+        lat: arena.latitude,
+        lng: arena.longitude
+      }
+    end
   end
 
   def show
-    id = params[:id]
-    @arena = Arena.find(id)
   end
 
   def new
-    @arena = current_user.restaurants.new
+    @arena = Arena.new
+    authorize @arena
+
   end
 
   def create
+    @arena = Arena.new(strong_params)
+    @arena.fighter = current_user
     authorize @arena
-    @arena = @arena.new(strong_params)
-    @arena.save
-
-    redirect_to arena_path(@arena)
+    if @arena.save
+      redirect_to arena_path(@arena)
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -29,20 +40,22 @@ class ArenasController < ApplicationController
   end
 
   def edit
-    id = params[:id]
-    @arena = Arena.find(id)
   end
 
   def update
-    id = params[:id]
-    arena = Arena.find(id)
-    arena.update(strong_params)
-    arena.save
-
-    redirect_to arena_path(arena.id)
+    if @arena.update(strong_params)
+      redirect_to arena_path(@arena.id)
+    else
+      render :edit
+    end
   end
 
   private
+
+  def set_arena
+    @arena = Arena.find(params[:id])
+    authorize @arena
+  end
 
   def strong_params
     params.require(:arena).permit(:address, :description, :capacity)

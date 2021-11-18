@@ -1,1 +1,64 @@
 // Specific CSS for your home-page
+.picture-container {
+  margin-top: 0px;
+  // border: 3px dotted red;
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  padding: 50px;
+}
+
+
+#arena-link {
+  background: asset-url("arena.jpeg");
+  transition: transform .5s ease;
+  height: 400px;
+  width: 550px;
+  background-size: cover;
+  filter: grayscale(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hospital-link a {
+  text-decoration: none;
+}
+
+#arena-link:hover {
+  transform: scale(1.08);
+}
+
+#arena-link h2 {
+  font-family: 'Alfa Slab One', cursive;
+  color: white;
+  font-size: 60px;
+}
+
+#hospital-link {
+  background: asset-url("hospital.jpeg");
+  transition: transform .5s ease;
+  height: 400px;
+  width: 550px;
+  background-size: cover;
+  filter: grayscale(100%);
+  font-family: 'Alfa Slab One', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hospital-link a {
+  text-decoration: none;
+}
+
+#hospital-link:hover {
+  transform: scale(1.08);
+  // background-size: 120% ;
+}
+
+#hospital-link h2 {
+  font-family: 'Alfa Slab One', cursive;
+  color: white;
+  font-size: 60px;
+}

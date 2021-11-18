@@ -1,0 +1,38 @@
+<div class="bg-image"
+     style="background-image: url('https://p4.wallpaperbetter.com/wallpaper/509/26/507/blow-fighter-fist-wallpaper-preview.jpg');
+            background-size: cover">
+  <div class="form">
+    <h1>My Dashboard </h1>
+    <br>
+    <div class="form-info">
+      <h2>My Arenas</h2>
+      <% if @arenas.empty? %>
+        <p>You have no arenas!</p>
+      <% else %>
+          <% @arenas.each do |arena|%>
+              <%= link_to "#{arena.address}", arena_path(arena.id), class:"form-list-element"%>
+              <br>
+          <% end %>
+      <% end %>
+      <h3><%= link_to "+Add", arenas_new_path %></h3>
+      <div class="mt-5">
+      <h2>My Fights</h2>
+      <% if @fights.empty? %>
+        <p>You have no fights!</p>
+      <% else %>
+          <% @fights.each do |fight|%>
+              <%= link_to "#{fight.title}", fight_path(fight), class:"form-list-element" %>
+              <br>
+          <% end %>
+      <% end %>
+      <h3><%= link_to "+Add", arenas_path %></h3>
+      </div>
+    </div>
+    <br>
+    <div class="buttons">
+      <%= link_to 'Edit your Profile', edit_fighter_registration_path, class: "submit-button" %>
+      <br>
+      <%= link_to 'Sign out', destroy_fighter_session_path, method: :delete, data: { confirm: "Are you sure?" }, class: "submit-button" %>
+    </div>
+  </div>
+</div>
