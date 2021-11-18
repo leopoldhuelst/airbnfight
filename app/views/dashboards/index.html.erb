@@ -2,11 +2,11 @@
      style="background-image: url('https://p4.wallpaperbetter.com/wallpaper/509/26/507/blow-fighter-fist-wallpaper-preview.jpg');
             background-size: cover">
   <div class="form">
-    <h1>My Dashboard</h1>
+    <h1>My Dashboard </h1>
     <br>
     <h2>My Arenas</h2>
     <% if @arenas.empty? %>
-      <p>You have no arenas!</p>
+      <p>You have no Arenas!</p>
     <% else %>
       <% @arenas.each do |arena|%>
       <%= link_to "#{arena.address}", arena_path(arena.id)%>

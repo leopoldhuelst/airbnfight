@@ -1,7 +1,7 @@
 class ArenasController < ApplicationController
   before_action :set_arena, only: [:show, :edit, :update, :destroy]
 
-  def index
+  def index 
     @arenas = policy_scope(Arena)
   end
 
