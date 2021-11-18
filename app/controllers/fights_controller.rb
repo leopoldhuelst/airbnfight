@@ -29,7 +29,7 @@ class FightsController < ApplicationController
 
   def update
     if @fight.update(strong_params)
-      redirect_to dashboard_path
+      redirect_to fight_path(@fight)
     else
       render :edit
     end

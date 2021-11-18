@@ -14,10 +14,19 @@
   font-family: 'Alfa Slab One', cursive;
 }
 
+.form a {
+  text-decoration: none;
+}
+
+.form-list-element {
+  padding: 20px;
+  line-height: 3;
+}
 
 .submit-button {
   text-decoration: none !important;
   color: white !important;
+  padding: 5px 15px;
   // text-shadow: 2px 2px 0px #FE4E02 !important;
   // background-color: ;
   border: 3px solid white;
@@ -29,4 +38,8 @@
 .dashboard {
   background-image: url(https://p4.wallpaperbetter.com/wallpaper/509/26/507/blow-fighter-fist-wallpaper-preview.jpg);
   background-size: cover;
+}
+
+.form-info {
+  min-height: 450px;
 }
