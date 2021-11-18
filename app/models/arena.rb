@@ -4,6 +4,6 @@ class Arena < ApplicationRecord
   geocoded_by :address
 
   validates :address, presence: true
-  # validates :description, length: { minimum: 15 }
+  validates :description, length: { minimum: 15 }
   after_validation :geocode
 end

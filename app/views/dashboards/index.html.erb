@@ -14,6 +14,7 @@
               <br>
           <% end %>
       <% end %>
+      <h3><%= link_to "+Add", arenas_new_path %></h3>
       <div class="mt-5">
       <h2>My Fights</h2>
       <% if @fights.empty? %>
@@ -24,6 +25,7 @@
               <br>
           <% end %>
       <% end %>
+      <h3><%= link_to "+Add", arenas_path %></h3>
       </div>
     </div>
     <br>
