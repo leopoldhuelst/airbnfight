@@ -24,9 +24,12 @@
 #index-header {
   display: flex;
   justify-content: space-between;
-  width: 55%;
+  width: 80px;
   align-items: flex-end;
+  margin-right: 0 auto;
 }
+
+
 
 
 .card-product {
@@ -38,6 +41,8 @@
   align-items: center;
   width: 30%;
   margin: 4px;
+  min-width: 260px;
+
 }
 
 
@@ -74,7 +79,12 @@
 
 
 #all-arenas {
-  width: 60%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.index-page {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
 }
