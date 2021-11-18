@@ -3,7 +3,7 @@
   padding: 100px 170px;
   font-family: 'Alfa Slab One', cursive;
   padding-bottom: 200px;
-  height: 800px;
+  min-height: 800px;
 }
 
 .form h1 {
@@ -12,6 +12,13 @@
 
 .form h2 {
   font-family: 'Alfa Slab One', cursive;
+}
+
+.form h3 {
+  font-family: 'Alfa Slab One', cursive;
+  color: white;
+  padding-top: 10px;
+  font-size: medium;
 }
 
 .form a {
