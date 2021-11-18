@@ -7,13 +7,13 @@
           <p>Rating: <%= @hospital.rating %>/5</p>
         </div>
         <div class="buttons">
+          <p class="button-back"><%= link_to '<-BACK', hospitals_path %></p>
           <p class="button-delete"><% if policy(@arena).destroy? %>
             <%= link_to "DELETE", arenas_delete_path(@arena.id), method: :delete, data: { confirm: "Are you sure?" } %>
             <% end %></p>
           <p class="button-edit"><% if policy(@arena).update? %>
             <%= link_to 'EDIT', arena_edit_path(@arena.id) %>
             <% end %></p>
-          <p class="button-back"><%= link_to 'BACK', hospitals_path %></p>
         </div>
       </div>
       <div id="card-image-hospital">
