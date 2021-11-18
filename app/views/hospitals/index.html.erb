@@ -1,0 +1,25 @@
+
+<div id="hospital-page">
+  <div id="all-hospitals">
+    <h1 id="all-hospitals-header">All Hospitals</h1>
+    <% @hospitals.each do |hospital| %>
+      <%= link_to hospital_path(hospital.id), class: "no-decoration" do %>
+        <div class="hospital-index-card">
+          <h2><%= hospital.name %></h2>
+          <p><%= hospital.address %></p>
+          <p>Rating: <%= hospital.rating %>/5</p>
+        </div>
+      <% end %>
+    <% end %>
+    <br>
+  </div>
+</div>
+
+
+<%# <div class="form"> %>
+  <%# @hospitals.each do |hospital| %>
+  <%#= hospital.name %>
+  <%#= hospital.address %>
+  <%#= hospital.rating %>
+  <%# end %>
+<%# </div> %>

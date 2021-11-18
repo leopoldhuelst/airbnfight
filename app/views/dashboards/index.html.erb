@@ -4,26 +4,32 @@
   <div class="form">
     <h1>My Dashboard </h1>
     <br>
-    <h2>My Arenas</h2>
-    <% if @arenas.empty? %>
-      <p>You have no Arenas!</p>
-    <% else %>
-      <% @arenas.each do |arena|%>
-      <%= link_to "#{arena.address}", arena_path(arena.id)%>
+    <div class="form-info">
+      <h2>My Arenas</h2>
+      <% if @arenas.empty? %>
+        <p>You have no arenas!</p>
+      <% else %>
+          <% @arenas.each do |arena|%>
+              <%= link_to "#{arena.address}", arena_path(arena.id), class:"form-list-element"%>
+              <br>
+          <% end %>
       <% end %>
-      <br>
-    <% end %>
-
-    <h2>My Fights</h2>
-    <div class="mb-0.5">
-    <% @fights.each do |fight|%>
-    <%= link_to "#{fight.title}", fight_path(fight) %>
-    <% end %>
+      <h3><%= link_to "+Add", arenas_new_path %></h3>
+      <div class="mt-5">
+      <h2>My Fights</h2>
+      <% if @fights.empty? %>
+        <p>You have no fights!</p>
+      <% else %>
+          <% @fights.each do |fight|%>
+              <%= link_to "#{fight.title}", fight_path(fight), class:"form-list-element" %>
+              <br>
+          <% end %>
+      <% end %>
+      <h3><%= link_to "+Add", arenas_path %></h3>
+      </div>
     </div>
     <br>
     <div class="buttons">
-      <%= link_to 'Back to Arenas', arenas_path, class: "submit-button" %>
-      <br>
       <%= link_to 'Edit your Profile', edit_fighter_registration_path, class: "submit-button" %>
       <br>
       <%= link_to 'Sign out', destroy_fighter_session_path, method: :delete, data: { confirm: "Are you sure?" }, class: "submit-button" %>
