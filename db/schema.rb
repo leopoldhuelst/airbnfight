@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2021_11_18_104048) do
     t.bigint "fighter_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["fighter_id"], name: "index_arenas_on_fighter_id"
   end
 

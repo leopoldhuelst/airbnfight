@@ -1,10 +1,11 @@
 <div id="arena-page">
-  <div id="index-header">
-    <h1>All arenas</h1>
-    <h2 id="new-arena-button"><%= link_to '+ Add Arena', arenas_new_path%></h2>
-  </div>
-  <div id="all-arenas">
-    <% @arenas.each do |arena| %>
+  <div>
+    <div id="index-header">
+      <h1>All arenas</h1>
+      <h2 id="new-arena-button"><%= link_to '+ Add Arena', arenas_new_path%></h2>
+    </div>
+    <div id="all-arenas">
+      <% @arenas.each do |arena| %>
       <div class="card-product">
         <img src="https://picsum.photos/200" />
         <div class="card-product-infos">
@@ -12,8 +13,15 @@
           <p>Capacity: <%= arena.capacity %></p>
         </div>
       </div>
-    <br>
-    <% end %>
-    <br>
+      <br>
+      <% end %>
+      <br>
+    </div>
+
+    <div style="width: 100%; height: 600px;"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 </div>
