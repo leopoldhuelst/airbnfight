@@ -34,7 +34,9 @@ character_names.each do |character_name|
     fighter: fighter,
     arena: arena
   )
+end
 
+5.times do
   Hospital.create!(
     name: "#{Faker::Name.male_first_name} #{Faker::Name.last_name} Hospital",
     rating: [5, 5, 5, 4, 4, 4, 4, 4, 3, 3, 3, 2, 2, 1].sample ,
