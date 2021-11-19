@@ -41,43 +41,28 @@
 }
 
 .button-delete {
-  // border: 2px solid white;
   margin: 20px;
 }
 
 .button-delete a {
   text-decoration: none;
 }
-//   text-decoration: none;
-//   color: white;
-//   text-shadow: 2px 2px 0px #FE4E02 ;
-// }
 
 .button-edit {
-  // border: 2px solid white;
   margin: 20px;
 }
 
 .button-edit a {
   text-decoration: none;
 }
-//   text-decoration: none;
-//   color: white;
-//   text-shadow: 2px 2px 0px #FE4E02 ;
-// }
 
 .button-back {
-  // border: 2px solid white;
   margin: 20px;
 }
 
 .button-back a {
    text-decoration: none;
 }
-//   text-decoration: none;
-//   color: white;
-//   text-shadow: 2px 2px 0px #FE4E02 ;
-// }
 
 .buttons {
   display: flex;
@@ -110,6 +95,5 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // border: 3px solid white;
   width: 45%;
 }

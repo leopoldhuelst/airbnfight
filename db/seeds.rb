@@ -6,8 +6,8 @@ Hospital.destroy_all
 puts "Data deleted"
 puts "Generating data"
 
-character_names = ["hercules", "adam", "benni", "jonas", "yair", "vero", "johnny cage", "gandalf", "consti", "legolas", "sauron", "aragon"]
-@addresses = ["Brienner Str. 50, München", "Königsplatz 1, München", "Neuhauser Straße 27, München", "Kardinal-Faulhaber-Straße 1, München", "Rosental 9, München", ]
+character_names =  ["hercules", "adam", "benni", "jonas", "johnny cage", "gandalf", "legolas", "sauron", "aragon", "gimli", "alrock", "saroman"]
+@addresses = ["Brienner Str. 50, München", "Königsplatz 1, München", "Neuhauser Straße 27, München", "Kardinal-Faulhaber-Straße 1, München", "Rosental 9, München", "Hohenzollernstraße 103, 80796 München", "Rosenheimer Str. 90, 81669 München", "Claudius-Keller-Straße 2, 81669 München", "Plinganserstraße 19, 81369 München", "Meglingerstraße 6, 81477 München", "Fürstenrieder Str. 54, 80686 München", "Kapuzinerstraße 8, 80337 München" ]
 arenas = []
 
 @urls = ['https://images.freeimages.com/images/large-previews/cba/alley-1-1233561.jpg', 'https://images.freeimages.com/images/large-previews/1e2/alley-1525007.jpg', 'https://cdn.pixabay.com/photo/2016/11/12/18/48/lost-places-1819465_1280.jpg',
@@ -30,9 +30,9 @@ character_names.each do |character_name|
   )
 
   arena = Arena.create!(
-    address: @addresses.sample,
+    address: @addresses[counter],
     description: Faker::Lorem.paragraph,
-    capacity: rand(1..10),
+    capacity: rand(2..10),
     fighter: fighter,
     image: @urls[counter]
   )
