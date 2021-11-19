@@ -9,7 +9,6 @@
         <p>
           Capacity: <%= @arena.capacity %>
         </p>
-      </div>
       <% if @arena.fighter == current_fighter %>
       <h2>Fights booked</h2>
         <% if @arena.fights.empty? %>
@@ -21,8 +20,12 @@
           <% end %>
         <% end %>
       <% else %>
+        <br>
+        <br>
+        <br>
         <p><%= link_to "Create a fight", fights_new_path(@arena.id), class: "button-container-2" %></p>
       <% end %>
+      </div>
       <div class="buttons">
         <p class="button-back"><%= link_to '←Back', arenas_path %></p>
         <p class="button-edit"><% if policy(@arena).update? %>
