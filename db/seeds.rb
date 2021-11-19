@@ -36,7 +36,6 @@ character_names.each do |character_name|
     fighter: fighter,
     arena: arena
   )
-  puts "fighter created"
 end
 
 5.times do
