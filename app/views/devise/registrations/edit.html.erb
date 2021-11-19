@@ -30,13 +30,13 @@
                   input_html: { autocomplete: "age" } %>
       <%= f.input :height,
                   required: false,
-                  input_html: { autocomplete: "height" } %>
+                  :label => "Height (cm)" %>
       <%= f.input :weight,
                   required: false,
-                  input_html: { autocomplete: "weight" } %>
+                  :label => "Weight (kg)" %>
       <%= f.input :arm_range,
                   required: false,
-                  input_html: { autocomplete: "arm_range" } %>
+                  :label => "Arm Range (cm)" %>
     </div>
 
     <div class="form-actions">
