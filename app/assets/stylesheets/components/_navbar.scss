@@ -21,6 +21,16 @@
   width: 40px;
 }
 
+.navbar-nav .dropdown-menu {
+  left: -100px;
+  background-color: black;
+  // background-color: rgba($color: white, $alpha: 0.3);
+}
+
+.dropdown-item {
+  color: #1EDD88 !important;
+}
+
 // #navbarDropdown {
 //   border:  3px solid #FE4E02;
 // }
