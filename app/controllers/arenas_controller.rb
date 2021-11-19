@@ -1,7 +1,7 @@
 class ArenasController < ApplicationController
   before_action :set_arena, only: [:show, :edit, :update, :destroy]
 
-  def index 
+  def index
     @arenas = policy_scope(Arena)
     @markers = @arenas.geocoded.map do |arena|
       {
@@ -58,6 +58,6 @@ class ArenasController < ApplicationController
   end
 
   def strong_params
-    params.require(:arena).permit(:address, :description, :capacity)
+    params.require(:arena).permit(:address, :description, :capacity, :image)
   end
 end
