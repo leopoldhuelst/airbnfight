@@ -5,8 +5,8 @@ Fighter.destroy_all
 puts "Data deleted"
 puts "Generating data"
 
-character_names = ["hercules", "adam", "benni", "jonas", "yair", "vero", "johnny cage", "gandalf", "consti", "legolas", "sauron", "aragon", "gimli", "alrock", "saroman"]
-addresses = ["Brienner Str. 50, München", "Königsplatz 1, München", "Neuhauser Straße 27, München", "Kardinal-Faulhaber-Straße 1, München", "Rosental 9, München", ]
+character_names = ["hercules", "adam", "benni", "jonas", "johnny cage", "gandalf", "legolas", "sauron", "aragon", "gimli", "alrock", "saroman"]
+addresses = ["Brienner Str. 50, München", "Königsplatz 1, München", "Neuhauser Straße 27, München", "Kardinal-Faulhaber-Straße 1, München", "Rosental 9, München", "Hohenzollernstraße 103, 80796 München", "Rosenheimer Str. 90, 81669 München", "Claudius-Keller-Straße 2, 81669 München", "Plinganserstraße 19, 81369 München", "Meglingerstraße 6, 81477 München", "Fürstenrieder Str. 54, 80686 München", "Kapuzinerstraße 8, 80337 München" ]
 
 character_names.each do |character_name|
   fighter = Fighter.create!(
@@ -19,12 +19,12 @@ character_names.each do |character_name|
     password: "1234567"
   )
 
-    arena = Arena.create!(
-      address: addresses.sample,
-      description: Faker::Lorem.paragraph,
-      capacity: rand(1..10),
-      fighter: fighter
-    )
+  arena = Arena.create!(
+    address: addresses.sample,
+    description: Faker::Lorem.paragraph,
+    capacity: rand(2..10),
+    fighter: fighter
+  )
 
 
   Fight.create!(
