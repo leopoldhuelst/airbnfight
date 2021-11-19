@@ -38,11 +38,13 @@
   background: rgb(39, 39, 39);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
+  // changes
   align-items: center;
   margin: 4px;
   border: 2px solid black;
-  min-width: 270px;
-  max-width: 280px;
+  // min-width: 270px;
+  // max-width: 280px;
+  width: 270px;
 }
 
 .card-product:hover {
